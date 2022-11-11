@@ -9,20 +9,24 @@ function miniNav(){
     }
 }
 
-let circularProgress = document.querySelector('.circular-progress'),
-    progressValue = document.querySelector('.progress-value');
+// HTML PROGRESSION
 
-let progressStartValue = 0,
-    progressEndValue = 97,
-    speed = 100;
+// let circularProgress = document.querySelector('.circular-progress'),
+//     progressValue = document.querySelector('.progress-value');
 
-let progress = setInterval(() => {
-    progressStartValue++;
+// let progressStartValue = 0,
+//     progressEndValue = 95,
+//     speed = 50;
 
-    progressValue.textContent = '${progressStartValue}%'
-    circularProgress.style.background = 'conic-gradient(#fdca50 ${progressStartValue  3.6}deg, #111 0deg'
+// let progress = setInterval(() => {
+//     progressStartValue++;
 
-    if(progressStartValue == progressEndValue){
-        clearInterval(progress)
-    }
-}, speed);
+//     progressValue.textContent = `${progressStartValue}%`
+//     circularProgress.style.background = `conic-gradient(#fdca50 ${progressStartValue * 3.6}deg, #111 0deg`
+
+    
+
+//     if(progressStartValue == progressEndValue){
+//         clearInterval(progress)
+//     }
+// }, speed);

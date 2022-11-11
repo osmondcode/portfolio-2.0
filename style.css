@@ -277,67 +277,83 @@ nav a:hover{
     align-items: center;
     position: relative;
     color: #fdca50;
-    background: conic-gradient(#fdca50 3.6deg, #111 0deg);
 }
-.html::before{
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    width: 220px;
-    height: 220px;
-    background: #111;
-}
-.html i{
-    position: absolute;
-    top: 15%;
-}
-.html p{
-    font-size: 30px;
-    position: absolute;
-    bottom: -40px;
-}
+
 .css{
     position: relative;
     color: #00a8cc;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .js{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     color: yellow;
 }
 .react{
-    position: relative;
     color: #00a8cc;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .boots{
-    position: relative;
     color: #fff;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .tailwind{
-    width: 150px;
-    height: 160px;
+    width: 250px;
+    height: 250px;
     display: flex;
+    border-radius: 50%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: visible;
+    /* overflow: visible; */
     position: relative;
+    border: 2px solid #fdca50;
 }
 @media (max-width: 1000px){
     .banner{
         flex-direction: column-reverse;
-        min-height: 120vh;
+        min-height: 180vh;
     }
     .banner-text, .banner-img{
         width: 100%;
         height: 60vh;
         align-items: center;
         justify-content: center;
-        /* background: chocolate; */
     }
     .banner-img{
         height: 50vh;
+        height: 90vh;
     }
     .banner-img img{
         left: 15%;
+        bottom: 0;
         width: 600px;
         display: flex;
         align-self: center;
@@ -369,19 +385,37 @@ nav a:hover{
         }
     }
 @media (max-width: 720px){
-    .banner-img img{
-        left: 10%;
+    .banner{
+        min-height: 180vh;
     }
     .banner-img{
-        overflow: hidden;
+        width: 100%;
+        height: 90vh;
+        padding: 0;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .banner-img img{
+        width: 100%;
+        left: 0;
+        bottom: 0%;
     }
     .resume{
         left: 30%;
     }
 }
 @media (max-width: 620px){
+    .banner-img{
+        width: 100%;
+        height: 70vh;
+        padding: 0;
+        justify-content: center;
+        align-items: flex-start;
+    }
     .banner-img img{
-        left: 5%;
+        width: 100%;
+        left: 0;
+        bottom: -15%;
     }
     .banner-text h1{
         font-size: 3em;
@@ -404,10 +438,22 @@ nav a:hover{
     .js, .react{
         margin: 0;
     }
+    .html i{
+        top: 2%;
+    }
 }
 @media (max-width: 520px) {
+    .banner-img{
+        width: 100%;
+        height: 70vh;
+        padding: 0;
+        justify-content: center;
+        align-items: flex-start;
+    }
     .banner-img img{
-        left: -10%;
+        width: 100%;
+        left: 0;
+        bottom: -15%;
     }
     .banner-text h1{
         margin-bottom: 30px;
@@ -433,4 +479,49 @@ nav a:hover{
         margin: 0;
         padding: 0;
     }
+}
+@media (max-width: 440px){
+    .banner{
+        min-height: 170vh;
+    }   
+    .banner-text, .banner-img{
+        width: 90%;
+        height: 60vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner-img{
+        width: 100%;
+        height: 50vh;
+        padding: 0;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .banner-text h1{
+        font-size: 2.2em;
+    }
+    .banner-img img{
+        left: 15%;
+        width: 100%;
+        left: 0;
+    }
+    .resume{
+        left: 0;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    #download, #contact{
+        width: 170px;
+    }
+}
+@media (max-width: 360px){
+    .banner-text h1{
+        font-size: 1.7em;
+    }
+    .resume{
+        flex-direction: column;
+        height: 150px;
+        bottom: 0;
+    }
+
 }
