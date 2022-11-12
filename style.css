@@ -1,11 +1,65 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    /* border: 2px solid yellow; */
-    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: linear-gradient(70deg #ffda);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
+
+/*          LOADER 2             */
+
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.loader > span {
+    display: inline-block;
+    background: purple;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    margin: 0 8px;
+    transform: translate3d(0);
+    animation:  bounce 0.6s infinite alternate;
+}
+
+.loader > span:nth-child(2){
+    background: palevioletred;
+    animation-delay: 0.2s;
+}
+.loader span:nth-child(3){
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    to {
+        width: 16px;
+        height: 16px;
+        transform: translate3d(0, -16px, 0);
+    }
+}
+
+
+
+/*          main         */
+.main{
+    width: 100%;
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-in;
+}
 .container{
     width: 100%;
     min-height: 100vh;
@@ -14,7 +68,6 @@
     align-items: center;
     background: url(./images/dots-bg.jfif);
     background-position: center;
-    /* background-repeat: no-repeat; */
     background-size: cover;
 }
 nav{
@@ -87,7 +140,7 @@ nav a:hover{
 }
 .get-in-touch{
     width: 100%;
-    height: 55vh;
+    min-height: 55vh;
     background: #000;
     display: none;
     flex-direction: column;
@@ -96,6 +149,7 @@ nav a:hover{
     position: absolute;
     z-index: 9;
     left: 0;
+    top: 13vh;
     transform: translateY(15vh);
     transition:  transform 2s;
     font-size: 1.8em;
@@ -238,6 +292,7 @@ nav a:hover{
 #download:hover, #contact:hover{
     transform: translateY(-5px);
 }
+
 .my-skills{
     width: 100%;
     min-height: 100vh;
@@ -332,14 +387,20 @@ nav a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* overflow: visible; */
     position: relative;
-    border: 2px solid #fdca50;
 }
 @media (max-width: 1000px){
+    #logo{
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        font-size: 2em;
+        font-family: 'Pacifico', cursive;
+    }
     .banner{
         flex-direction: column-reverse;
         min-height: 180vh;
+        top: auto;
     }
     .banner-text, .banner-img{
         width: 100%;
@@ -348,7 +409,7 @@ nav a:hover{
         justify-content: center;
     }
     .banner-img{
-        height: 50vh;
+        overflow: visible;
         height: 90vh;
     }
     .banner-img img{
@@ -515,6 +576,13 @@ nav a:hover{
     }
 }
 @media (max-width: 360px){
+    /* nav{
+        height: 15vh;
+        background: #fdca50;
+    } */
+    .banner-img{
+        height: 30vh;
+    }
     .banner-text h1{
         font-size: 1.7em;
     }

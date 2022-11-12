@@ -11,22 +11,17 @@ function miniNav(){
 
 // HTML PROGRESSION
 
-// let circularProgress = document.querySelector('.circular-progress'),
-//     progressValue = document.querySelector('.progress-value');
+const loader = document.querySelector('.loader');
+const main = document.querySelector('.main');
 
-// let progressStartValue = 0,
-//     progressEndValue = 95,
-//     speed = 50;
+function init() {
+    setTimeout(() => {
+        loader.style.opacity = 0;
+        loader.style.opacity = 'none';
 
-// let progress = setInterval(() => {
-//     progressStartValue++;
+        main.style.display = 'block';
+        setTimeout(() => (main.style.opacity = 1, 50))
+    }, 3000)
+}
 
-//     progressValue.textContent = `${progressStartValue}%`
-//     circularProgress.style.background = `conic-gradient(#fdca50 ${progressStartValue * 3.6}deg, #111 0deg`
-
-    
-
-//     if(progressStartValue == progressEndValue){
-//         clearInterval(progress)
-//     }
-// }, speed);
+init()
